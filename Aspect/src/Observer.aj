@@ -6,9 +6,9 @@ public aspect Observer {
 	
 	Map<Color, String> getConfig(){
     	Map<Color,String> response = new HashMap<>();
-    	response.put(new Color(128, 206, 225), "Azul");
-    	response.put(new Color(255, 105, 97), "Rojo");
-    	response.put(new Color(163, 231, 214), "Verde");
+    	response.put(new Color(128, 206, 225), "Change to BLUE Background");
+    	response.put(new Color(255, 105, 97), "Change to RED Background");
+    	response.put(new Color(163, 231, 214), "Change to GREEN Background");
     	return response;
     }
 	

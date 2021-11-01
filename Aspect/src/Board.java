@@ -17,7 +17,6 @@ public class Board {
 		initWindow();
 		initButtons();
 		addAction();
-		cleanBackground();
 	}
 
 	public static void initWindow() {
