@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.Color;
 
+
+
 public class Board {
 
 	public static JFrame frame = new JFrame("Tarea de Aspectos");
@@ -15,6 +17,7 @@ public class Board {
 		initWindow();
 		initButtons();
 		addAction();
+		cleanBackground();
 	}
 
 	public static void initWindow() {
@@ -25,7 +28,7 @@ public class Board {
 		frame.setVisible(true);
 
 	}
-
+	
 	public static void initButtons() {
 
 		colorBlueBg.setBounds(75, 50, 250, 50);
@@ -36,53 +39,51 @@ public class Board {
 
 		colorGrayBg.setBounds(75, 250, 250, 50);
 		colorGrayBg.setVisible(true);
-
+		
 		cleanWhiteBg.setBounds(75, 450, 250, 50);
 		cleanWhiteBg.setVisible(true);
 
 	}
-
+	
 	public static void addAction() {
 
 		colorBlueBg.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				changeColor(Color.blue);
+				changeColor(new Color(128, 206, 225));
 			}
-
+			
+			
 		});
 		frame.add(colorBlueBg);
 
 		colorRedBg.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				changeColor(Color.red);
+				changeColor(new Color(255, 105, 97));
 			}
 		});
-
+	
 		frame.add(colorRedBg);
 
 		colorGrayBg.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				changeColor(Color.gray);
+				changeColor(new Color(163, 231, 214));
 			}
 		});
 		frame.add(colorGrayBg);
 
-		cleanWhiteBg.addActionListener(new ActionListener() {
+	}
+	
+	public static void cleanBackground() {
+		cleanWhiteBg.addActionListener(new ActionListener()  {
 			public void actionPerformed(ActionEvent e) {
-				cleanBackground();
+				changeColor(Color.white);
 			}
 		});
-		frame.add(cleanWhiteBg);
-
-	}
-
-	public static void cleanBackground() {
-		frame.getContentPane().setBackground(Color.white);
-
-	}
-
-	public static void changeColor(Color color) {
+		frame.add(cleanWhiteBg);		
+	}	
+	
+	public static void changeColor (Color color) {
 		frame.getContentPane().setBackground(color);
-	}
+	} 
 
 }
