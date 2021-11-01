@@ -16,7 +16,7 @@ public class Board {
 
 		initWindow();
 		initButtons();
-		changeColorBackground();
+		addAction();
 		cleanBackground();
 	}
 
@@ -45,11 +45,11 @@ public class Board {
 
 	}
 	
-	public static void changeColorBackground() {
+	public static void addAction() {
 
 		colorBlueBg.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frame.getContentPane().setBackground(Color.blue);
+				changeColor(Color.blue);
 			}
 			
 			
@@ -58,7 +58,7 @@ public class Board {
 
 		colorRedBg.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frame.getContentPane().setBackground(Color.red);
+				changeColor(Color.red);
 			}
 		});
 	
@@ -66,7 +66,7 @@ public class Board {
 
 		colorGrayBg.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frame.getContentPane().setBackground(Color.gray);
+				changeColor(Color.gray);
 			}
 		});
 		frame.add(colorGrayBg);
@@ -76,10 +76,14 @@ public class Board {
 	public static void cleanBackground() {
 		cleanWhiteBg.addActionListener(new ActionListener()  {
 			public void actionPerformed(ActionEvent e) {
-				frame.getContentPane().setBackground(Color.white);
+				changeColor(Color.white);
 			}
 		});
 		frame.add(cleanWhiteBg);		
 	}	
+	
+	public static void changeColor (Color color) {
+		frame.getContentPane().setBackground(color);
+	} 
 
 }

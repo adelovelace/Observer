@@ -14,12 +14,12 @@ public aspect Observer {
 	
 	Map<Color, String> map = getConfig();
 	
-	pointcut change(Color color): args(color) && call(** changeColorBackground(**));
+	pointcut change (Color color) : args(color) && call( *changeColor* (..) );
 	after(Color color): change(color){
 		System.out.println(map.get(color));
 	}
 	
-	pointcut clean(): call(** cleanBackground(**));
+	pointcut clean(): call ( *cleanBackground* (..));
 	after(): clean() {
 		System.out.println("Cleaned Background");
 	}
