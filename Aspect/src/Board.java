@@ -9,7 +9,7 @@ public class Board {
 	public static JFrame frame = new JFrame("Tarea de Aspectos");
 	public static JButton colorBlueBg = new JButton("Change to Blue background");
 	public static JButton colorRedBg = new JButton("Change to Red background");
-	public static JButton colorGreenBg = new JButton("Change to Gray background");
+	public static JButton colorGreenBg = new JButton("Change to Green background");
 	public static JButton cleanWhiteBg = new JButton("Clean Background");
 
 	public static void main(String[] args) {

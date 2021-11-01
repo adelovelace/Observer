@@ -8,7 +8,7 @@ public aspect Observer {
     	Map<Color,String> response = new HashMap<>();
     	response.put(new Color(128, 206, 225), "Azul");
     	response.put(new Color(255, 105, 97), "Rojo");
-    	response.put(new Color(163, 231, 214), "Gris");
+    	response.put(new Color(163, 231, 214), "Verde");
     	return response;
     }
 	
